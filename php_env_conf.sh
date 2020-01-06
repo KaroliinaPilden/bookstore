@@ -11,7 +11,6 @@ service mysql start
 mysql -u root <<EOF
 UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE user = 'root' AND plugin = 'unix_socket';
 FLUSH PRIVILEGES;
-CREATE DATABASE books;
+CREATE DATABASE Books;
 EOF
-mysql -u root books < books.sql
-php -S localhost:8080
+mysql -u root Books < books.sql

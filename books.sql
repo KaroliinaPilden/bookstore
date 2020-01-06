@@ -1353,9 +1353,7 @@ CREATE TABLE `book_authors` (
   `author_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_yl21_Books_has_yl21_Authors_yl21_Authors1_idx` (`author_id`),
-  KEY `fk_yl21_Books_has_yl21_Authors_yl21_Books_idx` (`book_id`),
-  CONSTRAINT `fk_yl21_Books_has_yl21_Authors_yl21_Authors1` FOREIGN KEY (`author_id`) REFERENCES `authors` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_yl21_Books_has_yl21_Authors_yl21_Books` FOREIGN KEY (`book_id`) REFERENCES `books` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `fk_yl21_Books_has_yl21_Authors_yl21_Books_idx` (`book_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `book_authors` WRITE;
@@ -8048,9 +8046,7 @@ CREATE TABLE `orders` (
   `book_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_yl21_Orders_yl21_Clients1_idx` (`client_id`),
-  KEY `fk_yl21_Orders_yl21_Books1_idx` (`book_id`),
-  CONSTRAINT `fk_yl21_Orders_yl21_Books1` FOREIGN KEY (`book_id`) REFERENCES `books` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_yl21_Orders_yl21_Clients1` FOREIGN KEY (`client_id`) REFERENCES `clients` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `fk_yl21_Orders_yl21_Books1_idx` (`book_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `orders` WRITE;
