@@ -22,7 +22,7 @@ $year = $_GET['year'];
     <form action="index.php" method="get">
         <input type="text" name="title" placeholder="Pealkiri" value='<?=$title;?>' style="margin: 4px">
         <br>
-        <input type="text" name="year" placeholder="Aasta" value='<?=$year;?>'style="margin: 4px">'
+        <input type="text" name="year" placeholder="Aasta" value='<?=$year;?>'style="margin: 4px">
         <br>
         <input type="submit" value="Filteeri" style="margin: 4px">
     </form>
@@ -42,7 +42,3 @@ echo '</ul>';
 </ul>
 </body>
 </html>
-
-    
-
-|
