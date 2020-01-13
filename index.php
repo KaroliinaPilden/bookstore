@@ -16,15 +16,16 @@ $year = $_GET['year'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nimistu</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>          
-    <h1>Otsing</h1>
+<body>
+    <h3>Search</h3>
     <form action="index.php" method="get">
-        <input type="text" name="title" placeholder="Pealkiri" value='<?=$title;?>' style="margin: 4px">
+        <input type="text" name="title" placeholder="Title" value='<?=$title;?>' style="margin-top: 8px;">
         <br>
-        <input type="text" name="year" placeholder="Aasta" value='<?=$year;?>'style="margin: 4px">
+        <input type="text" name="year" placeholder="Year" value='<?=$year;?>' style="margin-top: 8px;">
         <br>
-        <input type="submit" value="Filteeri" style="margin: 4px">
+        <input type="submit" value="Filter" style="margin-top: 8px;">
     </form>
     <ul>
 
