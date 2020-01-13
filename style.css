@@ -10,20 +10,66 @@
     padding: 0;
 }
 body{
-    background-color: wheat;
+    
+    
 }
 
 .flex {
     max-width: 1440px;
     flex-direction: row;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 0;
     display: flex;
     align-items: center;
     width: 750px;
     justify-content: space-around;
+    background-color: wheat;
 }
 
 .inf {
     margin-right: 50px;
+}
+
+h1{
+    margin-top: 0;
+}
+
+h2{
+    margin-top: 0;
+    font-weight: normal;
+}
+
+h3{
+    font-size: 32px;
+    margin: 20px 0 10px 30px;
+}
+
+a {
+    font-size: 16px;
+}
+
+p{
+    margin: 20px 0 0 0;
+}
+
+li{
+    margin: 0 0 10px 30px;;
+    font-size: 10px;
+}
+
+form{
+    margin: 0 0 20px 30px;
+}
+
+button{
+    transform: rotate(180deg);
+    font-size: 70px;
+    border-color: transparent;
+    background-color: transparent;
+    margin: 20px 0 0 50px;
+}
+
+.back-img{
+    background-image: url('http://www.wildtextures.com/wp-content/uploads/wildtextures-creased-white-paper-texture.jpg');
+    opacity: 20%;
 }
