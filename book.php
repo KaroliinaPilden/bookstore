@@ -2,8 +2,7 @@
 require_once 'db_connection.php';
 
 $id = $_GET['id'];
-$title = $_GET['title'];
-$stmt = $pdo->prepare('SELECT * FROM books WHERE id = :id');
+$stmt = $pdo->prepare('SELECT * FROM books b LEFT JOIN book_authors ba ON book_id = b.id LEFT JOIN authors a ON author_id = a.id WHERE b.id = :id');
 $stmt->execute(['id' => $id]);
 $book = $stmt->fetch();
 ?>
@@ -17,18 +16,22 @@ $book = $stmt->fetch();
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class='back-img'>
+    <button id='back' onclick='history.back()'>➣</button>
     <div class="flex">
         <div class="inf">
-            <h1><?= $book['title']; ?></h1><br>
-            <p>Released: <?= $book['release_date']; ?></p><br>
-            <p>Language: <?= $book['language']; ?></p><br>
-            <p>Pages: <?= $book['pages']; ?></p><br>
-            <p>Price: <?= round($book['price'], 2); ?>€</p><br>
-            <p>Available now: <?= $book['stock_saldo']; ?></p><br>
-            <p>Type: <?= $book['type']; ?></p><br>
-            <p>Summary: <br> <?= $book['summary']; ?></p><br>
+            <h1><?= $book['title']; ?></h1>
+            <h2><?= $book['first_name'];?> <?= $book['last_name'];?></h2>
+            <p>Released: <?= $book['release_date']; ?></p>
+            <p>Language: <?= $book['language']; ?></p>
+            <p>Pages: <?= $book['pages']; ?></p>
+            <p>Price: <?= round($book['price'], 2); ?>€</p>
+            <p>Available now: <?= $book['stock_saldo']; ?></p>
+            <p>Type: <?= $book['type']; ?></p>
+            <p>Summary: <br> <?= $book['summary']; ?></p>
         </div>
         <img src="<?= $book['cover_path']; ?>" alt="" style="align-self: flex-start">
+    </div>
     </div>
 </body>
 </html>
