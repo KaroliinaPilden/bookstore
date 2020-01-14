@@ -16,10 +16,10 @@ $book = $stmt->fetch();
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class='back-img'>
-    <button id='back' onclick='history.back()'>➣</button>
+    <button id='back' onclick='history.back()'>⮕</button>
     <div class="flex">
         <div class="inf">
+        
             <h1><?= $book['title']; ?></h1>
             <h2><?= $book['first_name'];?> <?= $book['last_name'];?></h2>
             <p>Released: <?= $book['release_date']; ?></p>
@@ -32,6 +32,6 @@ $book = $stmt->fetch();
         </div>
         <img src="<?= $book['cover_path']; ?>" alt="" style="align-self: flex-start">
     </div>
-    </div>
+    
 </body>
 </html>
