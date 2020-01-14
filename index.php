@@ -19,6 +19,7 @@ $year = $_GET['year'];
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="back">
     <h3>Search</h3>
     <form action="index.php" method="get">
         <input type="text" name="title" placeholder="Title" value='<?=$title;?>' style="margin-top: 8px;">
@@ -41,5 +42,6 @@ while ( $row = $stmt->fetch() ) {
 echo '</ul>';
 ?>
 </ul>
+</div>
 </body>
 </html>
