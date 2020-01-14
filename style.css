@@ -10,8 +10,9 @@
     padding: 0;
 }
 body{
-    
-    
+    background-image: url(https://image.freepik.com/photos-gratuite/fond-texture-papier-froisse-noir_53476-2543.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .flex {
@@ -19,11 +20,12 @@ body{
     flex-direction: row;
     margin: auto;
     margin-top: 0;
+    padding: 100px;
     display: flex;
     align-items: center;
-    width: 750px;
+    width: 950px;
     justify-content: space-around;
-    background-color: wheat;
+    background-color: rgba(220,220,220,1);
 }
 
 .inf {
@@ -46,6 +48,12 @@ h3{
 
 a {
     font-size: 16px;
+    color:olivedrab;
+}
+
+a:visited{
+    font-size: 16px;
+    color: black;
 }
 
 p{
@@ -64,12 +72,11 @@ form{
 button{
     transform: rotate(180deg);
     font-size: 70px;
+    color: rgb(220,220,220);
     border-color: transparent;
     background-color: transparent;
     margin: 20px 0 0 50px;
 }
-
-.back-img{
-    background-image: url('http://www.wildtextures.com/wp-content/uploads/wildtextures-creased-white-paper-texture.jpg');
-    opacity: 20%;
-}
+ .back{
+     background-color: rgb(220,220,220);
+ }
