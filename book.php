@@ -32,6 +32,7 @@ $book = $stmt->fetch();
         </div>
         <img src="<?= $book['cover_path']; ?>" alt="" style="align-self: flex-start">
     </div>
-    
+    <a id='editing' href='edit.php?id=<?=$id?>'>Edit</a>
+    <a id='editing' href='delete.php?id=<?=$id?>'>Delete</a>
 </body>
 </html>
