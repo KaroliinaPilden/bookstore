@@ -6,7 +6,6 @@ require_once 'db_connection.php';
 $title = $_GET['title'];
 $year = $_GET['year'];
 
-
 ?>
 
 <!DOCTYPE html>
